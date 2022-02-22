@@ -60,3 +60,5 @@ nmap <C-w><down> <C-w>-
 nmap <Space>w :w<CR>
 nmap <Space>q :q<CR>
 nmap <Space>r :!
+nmap <Space>g :noh<CR>
+nmap <Space>b <Plug>(easymotion-s2)

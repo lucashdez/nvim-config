@@ -26,6 +26,7 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'windwp/nvim-autopairs'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'easymotion/vim-easymotion'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
