@@ -27,6 +27,7 @@ if has("nvim")
   Plug 'windwp/nvim-autopairs'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'easymotion/vim-easymotion'
+  Plug 'folke/todo-comments.nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
