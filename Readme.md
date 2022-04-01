@@ -20,10 +20,10 @@ To initiate the file explorer press:
 Press "N" and write the name
 
 **Navigate:**
-"k": up
-"j": down
-"l": open the file
-"h": go back -> `cd ..`
+- "k": up
+- "j": down
+- "l": open the file
+- "h": go back -> `cd ..`
 
 
 ----
