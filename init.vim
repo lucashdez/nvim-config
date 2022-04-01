@@ -31,6 +31,8 @@ if has('nvim')
   set inccommand=split
 endif
 
+let g:python3_host_prog = "C:/Python310/python.exe"
+
 " Suppress appending <PasteStart> and <PasteEnd> when pasting
 set t_BE=
 
