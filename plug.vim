@@ -28,6 +28,7 @@ if has("nvim")
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'easymotion/vim-easymotion'
   Plug 'folke/todo-comments.nvim'
+  Plug 'github/copilot.vim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
