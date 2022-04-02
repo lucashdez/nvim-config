@@ -29,6 +29,7 @@ if has("nvim")
   Plug 'easymotion/vim-easymotion'
   Plug 'folke/todo-comments.nvim'
   Plug 'github/copilot.vim'
+  Plug 'maxmellon/vim-jsx-pretty'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
