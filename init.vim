@@ -137,11 +137,17 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
   set background=dark
-   " Use NeoSolarized
-   let g:neosolarized_termtrans=1
-   runtime ./colors/NeoSolarized.vim
-   colorscheme NeoSolarized
+
+" Use NeoSolarized
+"   let g:neosolarized_termtrans=1
 " COLORSCHEMES
+"   ATOM
+"      runtime ./colors/atom-dark.vim
+"      colorscheme atom-dark
+    
+"   GRUVBOX 
+      let g:gruvbox_contrast_dark=1
+      colorscheme gruvbox
 "
   
 endif

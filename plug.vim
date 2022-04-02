@@ -31,6 +31,7 @@ if has("nvim")
   Plug 'github/copilot.vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'yuezk/vim-js'
+  Plug 'rafi/awesome-vim-colorschemes'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
