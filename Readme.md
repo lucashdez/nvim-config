@@ -36,3 +36,19 @@ Run:
 :Copilot setup
 " To use the suggestion use tab
 ```
+
+----
+
+## Fixes the JSDOC in treesitter parser
+
+Go to the folder with the data of nvim and enter `nvim-treesitter/queries/ecma/indents.scm`
+
+At the end of the file change the following line to:
+```scm
+  [
+    (comment) @auto 
+    (template_string)
+  ] @ignore
+```
+
+Now the problem will be temporally fixed
