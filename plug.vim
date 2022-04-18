@@ -32,6 +32,7 @@ if has("nvim")
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'yuezk/vim-js'
   Plug 'rafi/awesome-vim-colorschemes'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
