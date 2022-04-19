@@ -52,3 +52,20 @@ At the end of the file change the following line to:
 ```
 
 Now the problem will be temporally fixed
+
+## Fixes The use of todo-comments
+
+Install ripgrep
+
+And then you can use:
+```
+TODO: To mark todos
+HACK: To mark something a little bit strange
+PERF: To mark the fully optimised code
+NOTE: To mark some notes
+FIX: To mark code that needs fixing
+WARN: We don't know, you don't know
+```
+
+To see the list of comments of this type use the following command:
+`<space>td`
