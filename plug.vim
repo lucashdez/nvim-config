@@ -28,11 +28,11 @@ if has("nvim")
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'easymotion/vim-easymotion'
   Plug 'folke/todo-comments.nvim'
-  Plug 'github/copilot.vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'yuezk/vim-js'
   Plug 'rafi/awesome-vim-colorschemes'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'alvan/vim-closetag'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
