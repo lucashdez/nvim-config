@@ -33,6 +33,7 @@ if has("nvim")
   Plug 'rafi/awesome-vim-colorschemes'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'alvan/vim-closetag'
+  Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'}
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
