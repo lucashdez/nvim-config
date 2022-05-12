@@ -60,11 +60,11 @@ Install ripgrep
 And then you can use:
 ```
 TODO: To mark todos
-HACK: To mark something a little bit strange
+HACK: To mark something a little bit strange but optimal
 PERF: To mark the fully optimised code
 NOTE: To mark some notes
 FIX: To mark code that needs fixing
-WARN: We don't know, you don't know
+WARN: Mark code with warnings
 ```
 
 To see the list of comments of this type use the following command:
