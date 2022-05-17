@@ -34,6 +34,7 @@ if has("nvim")
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'alvan/vim-closetag'
   Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'}
+  Plug 'ap/vim-css-color'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
