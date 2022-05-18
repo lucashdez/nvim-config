@@ -36,6 +36,8 @@ In Mac we use:
 brew install neovim
 ```
 
+<!-- TODO: -->  The setup.sh explanation
+
 ## Configuring the configuration
 
 In linux go to `$HOME/.config/` and clone this repo there. Then change its name to `nvim`.
@@ -133,4 +135,6 @@ To open the Markdown preview follow this instructions:
 1. Enter the `.md` file
 2. Write `:MarkdownPreview`
 3. Enjoy the writting of markdown files.
+
+<!-- TODO:  Insert the gif-->
 
