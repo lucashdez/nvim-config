@@ -3,6 +3,9 @@
 
 **Email:** alu0101317496@ull.edu.es
 
+If you have some issue, don't hesitate to contact me or open a github issue in this repo with your problem, I will try 
+to answer with the solution as fast as possible.
+
 ----
 
 # Preview
@@ -50,7 +53,7 @@ else
 endif
 ```
 
-This lines tell nvim where is the python executable located
+This lines tell nvim where is the python executable located.
 
 # Plugins
 All the plugins are installed with the `Plug` vim plugin manager. To add or delete plugins
@@ -99,7 +102,7 @@ At the end of the file change the following line to:
   ] @ignore
 ```
 
-Now the problem will be temporally fixed
+Now the problem will be temporally fixed.
 
 ## TODO comments
 ![](./img/TODO1.png)
@@ -121,3 +124,13 @@ Install ripgrep
 To see the list of comments of this type use the following command:
 `<space>td`
 ![](./img/TODO2.png)
+
+## Markdown Preview
+
+The markdown preview will open a server locally to watch the changes in your Markdown file while you are coding it.
+
+To open the Markdown preview follow this instructions:
+1. Enter the `.md` file
+2. Write `:MarkdownPreview`
+3. Enjoy the writting of markdown files.
+
