@@ -36,7 +36,25 @@ In Mac we use:
 brew install neovim
 ```
 
-<!-- TODO: -->  The setup.sh explanation
+## The `setup.sh` file
+
+After installing neovim you must install the plugin manager and node.
+Use this file to automatically install the NVM and the Vim Plug.
+
+The file contains the following code: 
+```bash
+# VIM PLUG
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+echo "EJECUTE LO SIGUIENTE:"
+echo ""
+echo ""
+
+cat ./nvm.txt
+```
 
 ## Configuring the configuration
 
@@ -136,5 +154,5 @@ To open the Markdown preview follow this instructions:
 2. Write `:MarkdownPreview`
 3. Enjoy the writting of markdown files.
 
-<!-- TODO:  Insert the gif-->
+![](./img/MDPreview.gif)
 
