@@ -134,9 +134,10 @@ To get the support for the Javascript, CSS and HTML language install them with t
 
 ```lua
 :TSInstall html 
-:TSInstall css
 :TSInstall javascript
 ```
+
+**NOTE:** Don't install the css package for TreeSitter because it is incompatible with the css color helper.
 
 
 ### Fixes the JSDOC in treesitter parser
