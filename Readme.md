@@ -1,5 +1,9 @@
 # Nvim configuration
-**Author:** Lucas Hernández Abreu
+**Original author:** devaslife
+
+**Youtube channel:** [devaslife](https://www.youtube.com/watch?v=FW2X1CXrU1w&t)
+
+**Added more plugins and support:** Lucas Hernández Abreu
 
 **Email:** alu0101317496@ull.edu.es
 
@@ -20,7 +24,7 @@ All the highlight comes from the use of TreeSitter for Nvim
 
 # Installation
 
-First of all we need to install nvim. For all this plugins to work we need a 0.6 or higher version of Nvim.
+First of all we need to install nvim. For all this plugins to work we need a 0.5 or higher version of Nvim.
 
 In Windows we can go to
 [this page](https://github.com/neovim/neovim/wiki/Installing-Neovim) and follow the instructions for installation in Windows.
@@ -56,7 +60,17 @@ echo ""
 cat ./nvm.txt
 ```
 
-## Configuring the configuration
+## Customization
+
+In the folder you have some `*.vim` files, this files are the configuration
+for nvim. The key bindings and color themes are stored and asigned in this files.
+
+Use this files as you please for getting the most comfortable configuration for you.
+
+As an example I have bound `:w` and `:q` to `<space> + w` and `<space> + q`, also
+I have bound the `:!` for command execution to the `<space> + r` combination.
+
+## Configuring nvim
 
 In linux go to `$HOME/.config/` and clone this repo there. Then change its name to `nvim`.
 
@@ -110,6 +124,17 @@ To install some language support use: `:TSInstall <name_of_language>`
 
 You can see the name of the language in the `TSInstallInfo` command.
 
+
+**NOTE:**
+To get the support for the Javascript, CSS and HTML language install them with this commands:
+
+```lua
+:TSInstall html 
+:TSInstall css
+:TSInstall javascript
+```
+
+
 ### Fixes the JSDOC in treesitter parser
 
 Go to the folder with the data of nvim and enter `nvim-treesitter/queries/ecma/indents.scm`
@@ -123,6 +148,14 @@ At the end of the file change the following line to:
 ```
 
 Now the problem will be temporally fixed.
+
+## COC - Nvim
+COC is a VScode intellisense like plugin, it has support for multiple languages.
+To know if it has support for the language you use try searching in google the following query:
+```Javascript
+<Name_of_language> coc nvim
+```
+Then follow the instructions given in the page where the support for the language is implemented.
 
 ## TODO comments
 ![](./img/TODO1.png)
