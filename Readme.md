@@ -64,16 +64,6 @@ Follow the instructions given after the use of this file to complete the install
 
 **NOTE:** I recommend to install the latest stable version of node for this configuration of nvim to work. 
 
-## Customization
-
-In the folder you have some `*.vim` files, this files are the configuration
-for nvim. The key bindings and color themes are stored and asigned in this files.
-
-Use this files as you please for getting the most comfortable configuration for you.
-
-As an example I have bound `:w` and `:q` to `<space> + w` and `<space> + q`, also
-I have bound the `:!` for command execution to the `<space> + r` combination.
-
 ## Configuring nvim
 
 In linux go to `$HOME/.config/` and clone this repo there. Then change its name to `nvim`.
@@ -92,6 +82,16 @@ endif
 ```
 
 This lines tell nvim where is the python executable located.
+
+## Customization
+
+In the folder you have some `*.vim` files, this files are the configuration
+for nvim. The key bindings and color themes are stored and asigned in this files.
+
+Use this files as you please for getting the most comfortable configuration for you.
+
+As an example I have bound `:w` and `:q` to `<space> + w` and `<space> + q`, also
+I have bound the `:!` for command execution to the `<space> + r` combination.
 
 # Plugins
 All the plugins are installed with the `Plug` vim plugin manager. To add or delete plugins
