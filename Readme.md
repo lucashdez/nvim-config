@@ -60,6 +60,10 @@ echo ""
 cat ./nvm.txt
 ```
 
+Follow the instructions given after the use of this file to complete the installation.
+
+**NOTE:** I recommend to install the latest stable version of node for this configuration of nvim to work. 
+
 ## Customization
 
 In the folder you have some `*.vim` files, this files are the configuration
