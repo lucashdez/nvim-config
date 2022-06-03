@@ -63,6 +63,7 @@ nmap <Space>g :noh<CR>
 nmap <Space>b <Plug>(easymotion-s2)
 nmap <Space>nt :Defx<CR>
 nmap <Space>td :TodoQuickFix<CR>
+nmap <Space><Space> za
 
 "DEFX "{{{
 	autocmd FileType defx call s:defx_my_settings()

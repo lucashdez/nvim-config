@@ -35,6 +35,7 @@ if has("nvim")
   Plug 'alvan/vim-closetag'
   Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'}
   Plug 'ap/vim-css-color'
+  Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

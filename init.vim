@@ -145,11 +145,7 @@ if exists("&termguicolors") && exists("&winblend")
   set pumblend=5
   set background=dark
 
-" Use NeoSolarized
-   let g:neosolarized_termtrans=1
-   runtime ./colors/NeoSolarized.vim
-   colorscheme NeoSolarized
-"
+
 " COLORSCHEMES
 "   ATOM
 "      runtime ./colors/atom-dark.vim
@@ -159,7 +155,16 @@ if exists("&termguicolors") && exists("&winblend")
 "      let g:gruvbox_contrast_dark=1
 "      colorscheme gruvbox
 "
-  
+" Use NeoSolarized
+"   let g:neosolarized_termtrans=1
+"   runtime ./colors/NeoSolarized.vim
+"   colorscheme NeoSolarized
+"
+"   CATPPUCCIN
+"   flavours: latte, frappe, macchiato, mocha
+      let g:catppuccin_flavour = "mocha"
+      colorscheme catppuccin
+      
 endif
 
 "}}}
