@@ -61,9 +61,10 @@ nmap <Space>q :q<CR>
 nmap <Space>r :!
 nmap <Space>g :noh<CR>
 nmap <Space>b <Plug>(easymotion-s2)
-nmap <Space>nt :Defx<CR>
+nmap <Space>nt :Defx -columns=icons:indent:filename:type<CR>
 nmap <Space>td :TodoQuickFix<CR>
 nmap <Space><Space> za
+
 
 "DEFX "{{{
 	autocmd FileType defx call s:defx_my_settings()
@@ -81,7 +82,7 @@ nmap <Space><Space> za
 	  \ defx#do_action('open')
 	  nnoremap <silent><buffer><expr> E
 	  \ defx#do_action('open', 'vsplit')
-	  nnoremap <silent><buffer><expr> P
+	  nnoremap <silent><buffer><expr> <C-p>
 	  \ defx#do_action('preview')
 	  nnoremap <silent><buffer><expr> o
 	  \ defx#do_action('open_tree', 'toggle')
