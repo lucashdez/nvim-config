@@ -66,6 +66,12 @@ nmap <Space>td :TodoQuickFix<CR>
 nmap <Space><Space> za
 
 
+noremap <Space>tv :botright vnew <Bar> :terminal<cr>
+noremap <Space>th :botright new <Bar> :terminal<cr>
+
+
+tnoremap <Esc> <C-\><C-n>
+
 "DEFX "{{{
 	autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
