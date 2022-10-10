@@ -75,7 +75,7 @@ tnoremap <Esc> <C-\><C-n>
 
 " COC--------------------
 
-inoremap <silent><expr> <cr> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() : "\<C-g>u\<CR>"
+inoremap <silent><expr> <Tab> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() : "\<C-g>u\<Tab>"
 
 "-----------------------
 

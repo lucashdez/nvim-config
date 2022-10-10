@@ -23,6 +23,8 @@ set showcmd
 set cmdheight=1
 set laststatus=2
 set scrolloff=10
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set wrap
 "let loaded_matchparen = 1
