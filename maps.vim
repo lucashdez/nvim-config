@@ -12,6 +12,7 @@ nnoremap - <C-x>
 " Select all
 nmap <C-a> gg<S-v>G
 
+
 " Save with root permission
 command! W w !sudo tee > /dev/null %
 
@@ -71,6 +72,12 @@ noremap <Space>th :botright new <Bar> :terminal<cr>
 
 
 tnoremap <Esc> <C-\><C-n>
+
+" COC--------------------
+
+inoremap <silent><expr> <cr> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() : "\<C-g>u\<CR>"
+
+"-----------------------
 
 "DEFX "{{{
 	autocmd FileType defx call s:defx_my_settings()
