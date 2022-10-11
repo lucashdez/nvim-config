@@ -29,6 +29,10 @@ if has("nvim")
   Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install'}
   Plug 'ap/vim-css-color'
   Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+  Plug 'OmniSharp/omnisharp-vim'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-compe'
+  Plug 'onsails/lspkind-nvim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

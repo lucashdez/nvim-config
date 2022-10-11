@@ -60,11 +60,11 @@ nmap <C-w><down> <C-w>-
 nmap <Space>w :w<CR>
 nmap <Space>q :q<CR>
 nmap <Space>r :!
-nmap <Space>g :noh<CR>
-nmap <Space>b <Plug>(easymotion-s2)
-nmap <Space>nt :Defx -columns=icons:indent:filename:type<CR>
-nmap <Space>td :TodoQuickFix<CR>
-nmap <Space><Space> za
+nmap <silent><Space>g :noh<CR>
+nmap <silent><Space>b <Plug>(easymotion-s2)
+nmap <silent><Space>nt :Defx -columns=icons:indent:filename:type<CR>
+nmap <silent><Space>td :TodoQuickFix<CR>
+nmap <silent><Space><Space> za
 
 
 noremap <Space>tv :botright vnew <Bar> :terminal<cr>
