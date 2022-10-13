@@ -122,6 +122,7 @@ autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 autocmd FileType rust setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 "}}}
 
