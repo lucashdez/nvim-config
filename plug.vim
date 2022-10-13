@@ -33,6 +33,7 @@ if has("nvim")
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
   Plug 'onsails/lspkind-nvim'
+  Plug 'davidhalter/jedi-vim'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
