@@ -172,6 +172,14 @@ if exists("&termguicolors") && exists("&winblend")
 "   flavours: latte, frappe, macchiato, mocha
       let g:catppuccin_flavour = "mocha"
       colorscheme catppuccin
+
+"   RIGEL
+"    colorscheme rigel
+
+"   VIM-MATERIAL
+"    let g:material_style='palenight'
+"    let g:material_style='oceanic'
+"    colorscheme vim-material
       
 endif
 

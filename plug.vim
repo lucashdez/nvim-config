@@ -34,6 +34,9 @@ if has("nvim")
   Plug 'hrsh7th/nvim-compe'
   Plug 'onsails/lspkind-nvim'
   Plug 'davidhalter/jedi-vim'
+" COLORS
+  Plug 'Rigellute/rigel'
+  Plug 'hzchirs/vim-material'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
