@@ -32,3 +32,13 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+--CONJURE COMMANDS
+
+keymap.set('n', ';eb', '<Cmd>ConjureEvalBuf<CR>')
+keymap.set('n', ';ee', '<Cmd>ConjureEvalCommentCurrentForm<CR>')
+keymap.set('n', ';ls', '<Cmd>ConjureLogSplit<CR>')
+keymap.set('n', ';lv', '<Cmd>ConjureLogVSplit<CR>')
+keymap.set('n', ';lt', '<Cmd>ConjureLogTab<CR>')
+keymap.set('n', ';lr', '<Cmd>ConjureLogResetSoft<CR>')
+keymap.set('n', ';lR', '<Cmd>ConjureLogResetHard<CR>')

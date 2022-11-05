@@ -9,6 +9,8 @@ local is_win = has "win32"
 
 local is_neovide = has "g:neovide"
 
+
+
 if is_mac then
   require('craftzdog.macos')
 end
@@ -19,4 +21,3 @@ end
 if is_neovide then
   vim.cmd([[let g:neovide_transparency=0.80]])
 end
-

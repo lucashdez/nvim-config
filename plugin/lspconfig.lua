@@ -111,6 +111,19 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
+-- RUST
+nvim_lsp.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+-- C#
+local omnisharp_exe = "C:/Users/lukas/AppData/Local/omnisharp-vim/omnisharp-roslyn/OmniSharp.exe"
+local pid = vim.fn.getpid()
+nvim_lsp.omnisharp.setup {
+  cmd = { omnisharp_exe, "--languageserver", "--hostPID", tostring(pid) }
+}
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
@@ -119,6 +132,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   severity_sort = true,
 }
 )
+
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
