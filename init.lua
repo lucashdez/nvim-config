@@ -19,5 +19,5 @@ if is_win then
 end
 
 if is_neovide then
-  vim.cmd([[let g:neovide_transparency=0.80]])
+  vim.cmd([[let g:neovide_transparency=0.85]])
 end
