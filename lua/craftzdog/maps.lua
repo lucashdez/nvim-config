@@ -2,6 +2,14 @@ local keymap = vim.keymap
 
 keymap.set('n', 'x', '"_x')
 
+--Terminal horizontal/vertical
+keymap.set('n', ';th', ':botright new <Bar> :terminal<CR>')
+keymap.set('n', ';tv', ':botright vnew <Bar> :terminal<CR>')
+
+-- Save/Quit
+keymap.set('n', ';w', '<Cmd>w<CR>')
+keymap.set('n', ';q', '<Cmd>q<CR>')
+
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
 keymap.set('n', '-', '<C-x>')

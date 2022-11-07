@@ -111,19 +111,6 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities
 }
 
--- RUST
-nvim_lsp.rust_analyzer.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
--- C#
-local omnisharp_exe = "C:/Users/lukas/AppData/Local/omnisharp-vim/omnisharp-roslyn/OmniSharp.exe"
-local pid = vim.fn.getpid()
-nvim_lsp.omnisharp.setup {
-  cmd = { omnisharp_exe, "--languageserver", "--hostPID", tostring(pid) }
-}
-
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
@@ -132,6 +119,18 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   severity_sort = true,
 }
 )
+-- MY CONFIG
+nvim_lsp.omnisharp.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\mason\\bin\\omnisharp.cmd", "--languageserver" }
+}
+nvim_lsp.hls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\mason\\packages\\haskell-language-server\\haskell-language-server-wrapper.exe",
+    "--lsp" }
+}
 
 
 -- Diagnostic symbols in the sign column (gutter)
