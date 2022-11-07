@@ -49,5 +49,7 @@ packer.startup(function(use)
   -- conjure
   use 'Olical/conjure'
   use 'Olical/aniseed'
+  -- EasyMotion
+  use 'easymotion/vim-easymotion'
 
 end)

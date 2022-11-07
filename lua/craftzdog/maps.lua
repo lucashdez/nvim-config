@@ -56,3 +56,7 @@ keymap.set('n', ';lv', '<Cmd>ConjureLogVSplit<CR>')
 keymap.set('n', ';lt', '<Cmd>ConjureLogTab<CR>')
 keymap.set('n', ';lr', '<Cmd>ConjureLogResetSoft<CR>')
 keymap.set('n', ';lR', '<Cmd>ConjureLogResetHard<CR>')
+
+-- FASTSEARCH
+keymap.set('n', ';s', '/')
+keymap.set('n', ';g', '<Cmd>noh<CR>')
