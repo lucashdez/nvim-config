@@ -132,6 +132,14 @@ nvim_lsp.hls.setup {
     "--lsp" }
 }
 
+local clangd_capabilities = capabilities
+clangd_capabilities.offsetEncoding = { 'utf-16' }
+
+nvim_lsp.clangd.setup {
+  on_attach = on_attach,
+  capabilities = clangd_capabilities
+}
+
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

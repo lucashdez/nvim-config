@@ -47,9 +47,8 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
   -- conjure
+
   use 'Olical/conjure'
   use 'Olical/aniseed'
-  -- EasyMotion
-  use 'easymotion/vim-easymotion'
 
 end)
