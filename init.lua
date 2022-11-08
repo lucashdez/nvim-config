@@ -9,8 +9,6 @@ local is_win = has "win32"
 
 local is_neovide = has "g:neovide"
 
-
-
 if is_mac then
   require('craftzdog.macos')
 end
