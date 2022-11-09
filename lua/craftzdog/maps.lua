@@ -5,7 +5,9 @@ keymap.set('n', 'x', '"_x')
 --Terminal horizontal/vertical
 keymap.set('n', ';th', ':botright new <Bar> :terminal<CR>')
 keymap.set('n', ';tv', ':botright vnew <Bar> :terminal<CR>')
-
+vim.cmd([[
+tnoremap <silent> <Esc> <C-\><C-n>
+]])
 -- Save/Quit
 keymap.set('n', ';w', '<Cmd>w<CR>')
 keymap.set('n', ';q', '<Cmd>q<CR>')
