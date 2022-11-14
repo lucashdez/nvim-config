@@ -84,11 +84,19 @@ nvim_lsp.sourcekit.setup {
   capabilities = capabilities,
 }
 
+local rust_format = function(_, bufnr)
+  vim.lsp.buf.format({
+    filter = function(client)
+      return client.name ~= "volar"
+    end
+  })
+end
+
 nvim_lsp.sumneko_lua.setup {
   capabilities = capabilities,
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
-    enable_format_on_save(client, bufnr)
+    rust_format(client, bufnr)
   end,
   settings = {
     Lua = {
@@ -139,6 +147,44 @@ nvim_lsp.clangd.setup {
   on_attach = on_attach,
   capabilities = clangd_capabilities
 }
+
+nvim_lsp.pyright.setup {
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
+  capabilities = capabilities,
+  cmd = { "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\mason\\bin\\pyright-langserver.cmd", "--stdio" },
+  filetypes = { "python" },
+  settings = {
+    python = {
+      analysis = {
+        autoSearchPaths = true,
+        diagnosticMode = "workspace",
+        useLibraryCodeForTypes = true
+      }
+    }
+  },
+  single_file_support = true
+}
+
+nvim_lsp.clojure_lsp.setup {
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
+  capabilities = capabilities,
+  cmd = { "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\mason\\bin\\clojure-lsp.cmd" },
+  filetypes = { "clojure", "edn" },
+}
+
+nvim_lsp.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "C:\\Users\\lukas\\.rustup\\toolchains\\nightly-x86_64-pc-windows-msvc\\bin\\rust-analyzer.exe" },
+  filetypes = { "rust" }
+}
+
 
 
 -- Diagnostic symbols in the sign column (gutter)
