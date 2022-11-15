@@ -123,10 +123,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 -- MY CONFIG
 nvim_lsp.omnisharp.setup({
-	on_attach = function(client, bufnr)
-		on_attach(client, bufnr)
-		enable_format_on_save(client, bufnr)
-	end,
+	on_attach = on_attach,
 	capabilities = capabilities,
 	cmd = { "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\mason\\bin\\omnisharp.cmd", "--languageserver" },
 })
