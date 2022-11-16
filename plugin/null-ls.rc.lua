@@ -27,18 +27,20 @@ null_ls.setup({
 		}),
 		null_ls.builtins.diagnostics.fish,
 
-		--PROPIOS
 		--CODE ACTIONS
 		null_ls.builtins.code_actions.ltrs,
+
 		--LINTER
 		null_ls.builtins.diagnostics.ltrs,
 		null_ls.builtins.diagnostics.cpplint,
+
 		--FORMAT
-		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.rustfmt.with({
 			extra_args = { "--edition=2021" },
 		}),
+		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.csharpier,
+		null_ls.builtins.formatting.clang_format,
 		--------------
 	},
 
