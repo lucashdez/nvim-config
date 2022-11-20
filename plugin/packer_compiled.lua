@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  aniseed = {
+    loaded = true,
+    path = "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\aniseed",
+    url = "https://github.com/Olical/aniseed"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-buffer",
@@ -94,10 +99,10 @@ _G.packer_plugins = {
     path = "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
-  fzf = {
+  conjure = {
     loaded = true,
-    path = "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\fzf",
-    url = "https://github.com/junegunn/fzf"
+    path = "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\conjure",
+    url = "https://github.com/Olical/conjure"
   },
   ["git.nvim"] = {
     loaded = true,
@@ -214,15 +219,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vim-iced"] = {
+  ["todo.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ttodo\frequire\0" },
     loaded = true,
-    path = "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-iced",
-    url = "https://github.com/liquidz/vim-iced"
-  },
-  ["vim-sexp"] = {
-    loaded = true,
-    path = "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-sexp",
-    url = "https://github.com/guns/vim-sexp"
+    path = "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\todo.nvim",
+    url = "https://github.com/AmeerTaweel/todo.nvim"
   },
   ["zen-mode.nvim"] = {
     loaded = true,
@@ -232,6 +233,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: todo.nvim
+time([[Config for todo.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ttodo\frequire\0", "config", "todo.nvim")
+time([[Config for todo.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
