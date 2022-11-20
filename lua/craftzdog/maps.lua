@@ -64,4 +64,4 @@ keymap.set("n", ";s", "/")
 keymap.set("n", ";g", "<Cmd>noh<CR>")
 
 -- TODO COMMENTS
-keymap.set("n", ";td", "<Cmd>TodoTelescope<CR>")
+keymap.set("n", ";td", "<Cmd>TODOTelescope<CR>")
