@@ -70,6 +70,6 @@ keymap.set("n", "<Left>", "<Nop>")
 keymap.set("n", "<Right>", "<Nop>")
 
 -- GIT
-keymap.set("n", ";gb", "<Cmd>GitBlame<CR>")
-keymap.set("n", ";gd", "<Cmd>GitDiff HEAD~1<CR>")
+keymap.set("n", ";gv", "<Cmd>Gvdiffsplit<CR>")
+keymap.set("n", ";gh", "<Cmd>Ghdiffsplit<CR>")
 keymap.set("n", ";gg", ":Git ")
