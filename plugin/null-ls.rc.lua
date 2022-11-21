@@ -34,10 +34,6 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.ltrs,
 
 		--FORMAT
-		null_ls.builtins.formatting.rustfmt.with({
-			extra_args = { "--edition=2021" },
-		}),
-		null_ls.builtins.formatting.clang_format,
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.csharpier,
 		null_ls.builtins.formatting.blue,
