@@ -73,3 +73,6 @@ keymap.set("n", "<Right>", "<Nop>")
 keymap.set("n", ";gv", "<Cmd>Gvdiffsplit<CR>")
 keymap.set("n", ";gh", "<Cmd>Ghdiffsplit<CR>")
 keymap.set("n", ";gg", ":Git ")
+
+-- FOLD
+keymap.set("n", ";<Space>", "za")

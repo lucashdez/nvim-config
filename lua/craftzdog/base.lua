@@ -6,6 +6,7 @@ vim.opt.fileencoding = "utf-8"
 
 vim.wo.number = true
 
+vim.cmd([[set foldmethod=marker foldlevel=0]])
 vim.opt.title = true
 vim.opt.relativenumber = true
 vim.opt.autoindent = true
