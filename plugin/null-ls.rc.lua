@@ -32,7 +32,6 @@ null_ls.setup({
 
 		--LINTER
 		null_ls.builtins.diagnostics.ltrs,
-		null_ls.builtins.diagnostics.cpplint,
 
 		--FORMAT
 		null_ls.builtins.formatting.rustfmt.with({
