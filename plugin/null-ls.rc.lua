@@ -38,7 +38,10 @@ null_ls.setup({
 			extra_args = { "--edition=2021", "--config", "brace_style=AlwaysNextLine" },
 		}),
 		null_ls.builtins.formatting.clang_format.with({
-			extra_args = { "--style", "{IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman}" },
+			extra_args = {
+				"--style",
+				"{IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman, AlwaysBreakAfterReturnType: TopLevelDefinitions, IndentCaseLabels: true}",
+			},
 		}),
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.formatting.csharpier,
