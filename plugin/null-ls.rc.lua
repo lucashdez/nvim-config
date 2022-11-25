@@ -19,7 +19,7 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.formatting.prettierd.with({
 			extra_args = {
-				"--tab-width=2",
+				"--tab-width=4",
 			},
 		}),
 		null_ls.builtins.diagnostics.eslint_d.with({

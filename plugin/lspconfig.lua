@@ -180,6 +180,8 @@ nvim_lsp.html.setup({
 	capabilities = capabilities,
 })
 
+nvim_lsp.tsserver.setup({})
+
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
