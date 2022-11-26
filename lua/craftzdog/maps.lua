@@ -76,3 +76,6 @@ keymap.set("n", ";gg", ":Git ")
 
 -- FOLD
 keymap.set("n", ";<Space>", "za")
+-- Comfy Esc
+keymap.set("i", "<C-i>", "<Esc>")
+keymap.set("v", "<C-i>", "<Esc>")
