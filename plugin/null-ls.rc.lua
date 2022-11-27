@@ -35,7 +35,11 @@ null_ls.setup({
 
 		--FORMAT
 		null_ls.builtins.formatting.rustfmt.with({
-			extra_args = { "--edition=2021", "--config", "brace_style=AlwaysNextLine" },
+			extra_args = {
+				"--edition=2021",
+				"--config",
+				"brace_style=AlwaysNextLine,control_brace_style=AlwaysNextLine",
+			},
 		}),
 		null_ls.builtins.formatting.clang_format.with({
 			extra_args = {
