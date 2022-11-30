@@ -10,6 +10,7 @@ local is_win = has("win32")
 local is_neovide = has("g:neovide")
 
 vim.cmd([[let g:conjure#client#python#stdio#command="py -iq"]])
+vim.g["conjure#extract#tree_sitter#enabled"] = true
 
 if is_mac then
 	require("craftzdog.macos")
