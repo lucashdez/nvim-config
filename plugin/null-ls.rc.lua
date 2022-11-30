@@ -22,9 +22,6 @@ null_ls.setup({
 				"--tab-width=4",
 			},
 		}),
-		null_ls.builtins.diagnostics.eslint_d.with({
-			diagnostics_format = "[eslint] #{m}\n(#{c})",
-		}),
 		null_ls.builtins.diagnostics.fish,
 
 		--CODE ACTIONS

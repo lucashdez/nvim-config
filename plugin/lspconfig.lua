@@ -186,6 +186,10 @@ nvim_lsp.cssls.setup({
 })
 
 nvim_lsp.tsserver.setup({})
+nvim_lsp.denols.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
