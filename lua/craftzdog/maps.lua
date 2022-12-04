@@ -79,3 +79,8 @@ keymap.set("n", ";<Space>", "za")
 -- Comfy Esc
 keymap.set("i", "<C-k>", "<Esc>")
 keymap.set("v", "<C-k>", "<Esc>")
+-- Movement
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "<n>", "nzzzv")
+keymap.set("n", "<N>", "Nzzzv")
