@@ -162,7 +162,11 @@ nvim_lsp.pyright.setup({
 })
 
 nvim_lsp.clojure_lsp.setup({
-	on_attach = on_attach,
+	on_attach = function(client, bufnr)
+		on_attach(client, bufnr)
+		enable_format_on_save(client, bufnr)
+	end,
+
 	capabilities = capabilities,
 	cmd = { "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\mason\\bin\\clojure-lsp.cmd" },
 	filetypes = { "clojure", "edn" },

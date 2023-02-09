@@ -35,7 +35,7 @@ null_ls.setup({
 			extra_args = {
 				"--edition=2021",
 				"--config",
-				"brace_style=AlwaysNextLine,control_brace_style=AlwaysNextLine",
+				"brace_style=AlwaysNextLine,control_brace_style=AlwaysNextLine,chain_width=30,imports_layout=Vertical,wrap_comments=true,max_width=80,error_on_line_overflow=true",
 			},
 		}),
 		null_ls.builtins.formatting.clang_format.with({
