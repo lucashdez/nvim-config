@@ -10,7 +10,7 @@ ts.setup({
 	},
 	indent = {
 		enable = true,
-		disable = { "cpp", "c" },
+		disable = { "cpp", "c", "rust" },
 	},
 	ensure_installed = {
 		"tsx",
