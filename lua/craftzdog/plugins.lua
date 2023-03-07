@@ -13,6 +13,8 @@ packer.startup(function(use)
 		requires = { "tjdevries/colorbuddy.nvim" },
 	})
 	use("ellisonleao/gruvbox.nvim") -- gruvbox
+	use("Mofiqul/dracula.nvim") -- dracula
+	use("shaunsingh/nord.nvim") -- nord
 	use("nvim-lualine/lualine.nvim") -- Statusline
 	use("nvim-lua/plenary.nvim") -- Common utilities
 	use("onsails/lspkind-nvim") -- vscode-like pictograms

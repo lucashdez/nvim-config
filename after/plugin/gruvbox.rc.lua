@@ -2,4 +2,4 @@ require("gruvbox").setup({
     constrast = "hard",
 })
 
-vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme gruvbox")
