@@ -41,7 +41,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.clang_format.with({
 			extra_args = {
 				"--style",
-				"{ IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman, AlwaysBreakAfterReturnType: TopLevelDefinitions, IndentCaseLabels: true}",
+				"{ IndentWidth: 4, TabWidth: 4, AlwaysBreakAfterReturnType: TopLevelDefinitions, IndentCaseLabels: true}",
 			},
 		}),
 		null_ls.builtins.formatting.stylua,
@@ -49,7 +49,6 @@ null_ls.setup({
 		null_ls.builtins.formatting.blue,
 		--------------
 	},
-
 	on_attach = function(client, bufnr)
 		if client.supports_method("textDocument/formatting") then
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })

@@ -83,12 +83,7 @@ nvim_lsp.tsserver.setup({
 	capabilities = capabilities,
 })
 
-nvim_lsp.sourcekit.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-nvim_lsp.sumneko_lua.setup({
+nvim_lsp.lua_ls.setup({
 	capabilities = capabilities,
 	on_attach = function(client, bufnr)
 		on_attach(client, bufnr)
@@ -100,7 +95,6 @@ nvim_lsp.sumneko_lua.setup({
 				-- Get the language server to recognize the `vim` global
 				globals = { "vim" },
 			},
-
 			workspace = {
 				-- Make the server aware of Neovim runtime files
 				library = vim.api.nvim_get_runtime_file("", true),
@@ -144,6 +138,12 @@ nvim_lsp.clangd.setup({
 	capabilities = clangd_capabilities,
 })
 
+nvim_lsp.cmake.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	cmd = { "cmake-language-server" },
+})
+
 nvim_lsp.pyright.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -166,7 +166,6 @@ nvim_lsp.clojure_lsp.setup({
 		on_attach(client, bufnr)
 		enable_format_on_save(client, bufnr)
 	end,
-
 	capabilities = capabilities,
 	cmd = { "C:\\Users\\lukas\\AppData\\Local\\nvim-data\\mason\\bin\\clojure-lsp.cmd" },
 	filetypes = { "clojure", "edn" },
