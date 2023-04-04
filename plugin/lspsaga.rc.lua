@@ -4,10 +4,7 @@ if not status then
 end
 
 saga.setup({
-	server_filetype_map = {
-		typescript = { "typescript" },
-		python = { "python" },
-	},
+	server_filetype_map = {},
 })
 
 local opts = { noremap = true, silent = true }
