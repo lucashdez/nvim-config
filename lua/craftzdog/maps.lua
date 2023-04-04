@@ -36,10 +36,10 @@ keymap.set("", "sl", "<C-w>l")
 
 -- Resize window
 --keymap.set("n", "<C-w><left>", "<C-w><")
-keymap.set("n", "<C-w><", ":vertical resize +5<CR>")
-keymap.set("n", "<C-w>>", ":vertical resize -5<CR>")
-keymap.set("n", "<C-w>+", ":resize +5<CR>")
-keymap.set("n", "<C-w>-", ":resize -5<CR>")
+keymap.set("", "<C-w><", ":vertical resize +5<CR>")
+keymap.set("", "<C-w>>", ":vertical resize -5<CR>")
+keymap.set("", "<C-w>+", ":resize +5<CR>")
+keymap.set("", "<C-w>-", ":resize -5<CR>")
 
 --CONJURE COMMANDS
 
