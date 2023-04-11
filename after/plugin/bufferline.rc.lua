@@ -1,36 +1,27 @@
-local status, bufferline = pcall(require, "bufferline")
-if (not status) then return end
-
-bufferline.setup({
-  options = {
-    mode = "tabs",
-    separator_style = 'slant',
-    always_show_bufferline = false,
-    show_buffer_close_icons = false,
-    show_close_icon = false,
-    color_icons = true
-  },
-  highlights = {
-    separator = {
-      fg = '#073642',
-      bg = '#002b36',
-    },
-    separator_selected = {
-      fg = '#073642',
-    },
-    background = {
-      fg = '#657b83',
-      bg = '#002b36'
-    },
-    buffer_selected = {
-      fg = '#fdf6e3',
-      bold = true,
-    },
-    fill = {
-      bg = '#073642'
-    }
-  },
+require("bufferline").setup({
+	options = {
+		mode = "buffers",
+		numbers = "ordinal",
+		numer_style = "subscript",
+		close_command = "bdelete! %d",
+		indicator_icon = "▎",
+		buffer_close_icon = "",
+		modified_icon = "●",
+		close_icon = "",
+		left_trunc_marker = "",
+		right_trunc_marker = "",
+		name_formatter = function(buf)
+			if buf.name:match("%.md") then
+				return vim.fn.fnamemod(buf.name, ":t:r")
+			end
+		end,
+		max_name_length = 12,
+		max_prefix_length = 15,
+		tab_size = 12,
+		diagnostics = "nvim_lsp",
+		diagnostics_update_in_insert = false,
+		diagnostics_indicator = function(count, level, errors, ctx)
+			return "(" .. count .. ")"
+		end,
+	},
 })
-
-vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
-vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})

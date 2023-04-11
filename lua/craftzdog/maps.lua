@@ -89,3 +89,11 @@ keymap.set("n", "j", "jzz")
 keymap.set("n", "k", "kzz")
 keymap.set("n", "G", "Gzz")
 keymap.set("n", "gg", "ggzz")
+
+-- Buffer
+keymap.set("n", "<S-Right>", "<Cmd>BufferLineCycleNext<CR>")
+keymap.set("n", "<S-Left>", "<Cmd>BufferLineCyclePrev<CR>")
+
+-- LAYOUTS(Tabs)
+keymap.set("n", "<Tab>", "<Cmd>tabnext<CR>")
+keymap.set("n", "<S-Tab>", "<Cmd>tabprevious<CR>")

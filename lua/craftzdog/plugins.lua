@@ -47,7 +47,7 @@ packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
-	use("akinsho/nvim-bufferline.lua")
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "nvim-tree/nvim-web-devicons" })
 	-- use 'github/copilot.vim'
 
 	use("lewis6991/gitsigns.nvim")
