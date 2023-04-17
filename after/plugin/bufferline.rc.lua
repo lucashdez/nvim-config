@@ -4,7 +4,7 @@ require("bufferline").setup({
 		numbers = "ordinal",
 		numer_style = "subscript",
 		close_command = "bdelete! %d",
-		indicator_icon = "▎",
+		indicator_style = "▎",
 		buffer_close_icon = "",
 		modified_icon = "●",
 		close_icon = "",
@@ -12,7 +12,7 @@ require("bufferline").setup({
 		right_trunc_marker = "",
 		name_formatter = function(buf)
 			if buf.name:match("%.md") then
-				return vim.fn.fnamemod(buf.name, ":t:r")
+				return vim.fn.fnamemodify(buf.name, ":t:r")
 			end
 		end,
 		max_name_length = 12,

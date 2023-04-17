@@ -74,7 +74,6 @@ keymap.set("n", "<Right>", "<Nop>")
 keymap.set("n", ";gv", "<Cmd>Gvdiffsplit<CR>")
 keymap.set("n", ";gh", "<Cmd>Ghdiffsplit<CR>")
 keymap.set("n", ";gg", ":Git ")
-
 -- FOLD
 keymap.set("n", ";<Space>", "za")
 -- Comfy Esc
@@ -93,6 +92,7 @@ keymap.set("n", "gg", "ggzz")
 -- Buffer
 keymap.set("n", "<S-Right>", "<Cmd>BufferLineCycleNext<CR>")
 keymap.set("n", "<S-Left>", "<Cmd>BufferLineCyclePrev<CR>")
+keymap.set("n", "<S-q>", "<Cmd>bdelete<CR>")
 
 -- LAYOUTS(Tabs)
 keymap.set("n", "<Tab>", "<Cmd>tabnext<CR>")
