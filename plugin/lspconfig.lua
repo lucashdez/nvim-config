@@ -25,7 +25,7 @@ local on_attach = function(client, bufnr)
 	local function buf_set_keymap(...)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
 	end
-
+	client.server_capabilities.semanticTokensProvider = nil
 	--Enable completion triggered by <c-x><c-o>
 	--local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 	--buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -136,6 +136,7 @@ clangd_capabilities.offsetEncoding = { "utf-16" }
 nvim_lsp.clangd.setup({
 	on_attach = on_attach,
 	capabilities = clangd_capabilities,
+	cmd = { "clangd" },
 })
 
 nvim_lsp.cmake.setup({
@@ -174,7 +175,7 @@ nvim_lsp.clojure_lsp.setup({
 nvim_lsp.rust_analyzer.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	cmd = { "C:\\Users\\lukas\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\bin\\rust-analyzer.exe" },
+	cmd = { "rust-analyzer" },
 	filetypes = { "rust" },
 })
 
