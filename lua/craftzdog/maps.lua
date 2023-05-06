@@ -73,7 +73,7 @@ keymap.set("n", "<Right>", "<Nop>")
 -- GIT
 keymap.set("n", ";gv", "<Cmd>Gvdiffsplit<CR>")
 keymap.set("n", ";gh", "<Cmd>Ghdiffsplit<CR>")
-keymap.set("n", ";gg", ":Git ")
+keymap.set("n", ";gg", ":Git<CR> ")
 -- FOLD
 keymap.set("n", ";<Space>", "za")
 -- Comfy Esc
