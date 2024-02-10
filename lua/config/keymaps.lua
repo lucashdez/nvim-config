@@ -3,12 +3,14 @@
 -- Add any additional keymaps here
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
+local discipline = require("lucashdez.discipline")
+discipline.cowboy()
 
 vim.g.maplocalleader = ";"
 
 -- Back to normal
-keymap.set("i", "<C-k>", "<Esc>")
-keymap.set("v", "<C-k>", "<Esc>")
+keymap.set("i", "<C-l>", "<Esc>", opts)
+keymap.set("v", "<C-l>", "<Esc>", opts)
 
 -- Windows
 --
@@ -39,11 +41,12 @@ keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzz")
 keymap.set("n", "N", "Nzz")
-keymap.set("n", "j", "jzz")
-keymap.set("n", "k", "kzz")
 keymap.set("n", "G", "Gzz")
 keymap.set("n", "gg", "ggzz")
-keymap.set("n", "<C-j>", "}zz")
-keymap.set("n", "<C-k>", "{zz")
 -- Bdelete
 keymap.set("n", "<S-q>", "<Cmd>bdelete!<CR>")
+
+-- Diagnostics
+keymap.set("n", "C-j", function()
+    vim.diagnostic.goto_next()
+end)
