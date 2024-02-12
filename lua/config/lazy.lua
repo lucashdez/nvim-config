@@ -18,7 +18,6 @@ require("lazy").setup({
         { import = "lazyvim.plugins.extras.lang.typescript" },
         { import = "lazyvim.plugins.extras.lang.json" },
         { import = "lazyvim.plugins.extras.lang.rust" },
-        { import = "lazyvim.plugins.extras.coding.Codeium" },
         { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
         -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
         -- import/override with your plugins
