@@ -3,8 +3,6 @@
 -- Add any additional keymaps here
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
-local discipline = require("lucashdez.discipline")
-discipline.cowboy()
 
 vim.g.maplocalleader = ";"
 

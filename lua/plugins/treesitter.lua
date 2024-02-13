@@ -11,6 +11,8 @@ return {
                 "scss",
                 "css",
                 "sql",
+                "norg",
+                "norg_meta",
             },
         },
         config = function(_, opts)
