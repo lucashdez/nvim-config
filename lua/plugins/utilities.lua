@@ -14,7 +14,4 @@ return {
     {
         "HiPhish/rainbow-delimiters.nvim",
     },
-    {
-        "itchyny/calendar.vim",
-    },
 }
