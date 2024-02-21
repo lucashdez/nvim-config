@@ -25,11 +25,18 @@ return {
         -- tag = "*",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
+            local notes_d = "~/drive/El-Arca"
+            if vim.fn.has("win32") then
+                notes_d = "~/Mi unidad/El-Arca/Notes"
+            end
             require("neorg").setup({
                 load = {
                     ["core.defaults"] = {}, -- Loads default behaviour
                     ["core.concealer"] = {}, -- Adds pretty icons to your documents
                     ["core.ui"] = {},
+                    ["core.tempus"] = {},
+                    ["core.ui.calendar"] = {},
+                    ["core.summary"] = {},
                     ["core.completion"] = {
                         config = {
                             engine = "nvim-cmp",
@@ -38,7 +45,7 @@ return {
                     ["core.dirman"] = { -- Manages Neorg workspaces
                         config = {
                             workspaces = {
-                                notes = "~/drive/El-Arca",
+                                notes = notes_d,
                             },
                         },
                     },
