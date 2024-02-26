@@ -34,8 +34,8 @@ return {
                     ["core.defaults"] = {}, -- Loads default behaviour
                     ["core.concealer"] = {}, -- Adds pretty icons to your documents
                     ["core.ui"] = {},
-                    ["core.tempus"] = {},
-                    ["core.ui.calendar"] = {},
+                    --["core.tempus"] = {},
+                    --["core.ui.calendar"] = {},
                     ["core.summary"] = {},
                     ["core.completion"] = {
                         config = {

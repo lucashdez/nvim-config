@@ -11,4 +11,7 @@ return {
     {
         "lucashdez/CalendarNvim",
     },
+    {
+        "lucashdez/TaskTracker",
+    },
 }
