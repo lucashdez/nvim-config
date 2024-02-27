@@ -3,7 +3,7 @@
   "LazyVim": { "branch": "main", "commit": "fe72424e77cb9c953084bbcaaa0eb7fe8056dc70" },
   "LuaSnip": { "branch": "master", "commit": "f3b3d3446bcbfa62d638b1903ff00a78b2b730a1" },
   "SchemaStore.nvim": { "branch": "main", "commit": "fac1359806c9f3d7cfbf714d45c78350d11476b3" },
-  "TaskTracker": { "branch": "master", "commit": "335849585319555be885bf8bcab6628033b2aaa8" },
+  "TaskTracker": { "branch": "master", "commit": "46aae26328778db2cde535e053e1b2ad9b13d237" },
   "bufferline.nvim": { "branch": "main", "commit": "b15c6daf5a64426c69732b31a951f4e438cb6590" },
   "calendar.vim": { "branch": "master", "commit": "66e6d0955efb6beb68912dce3ff484e8805d975c" },
   "catppuccin": { "branch": "main", "commit": "c0de3b46811fe1ce3912e2245a9dfbea6b41c300" },
