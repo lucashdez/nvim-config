@@ -1,7 +1,8 @@
 return {
     -- Vim Fugitive
     {
-        "tpope/vim-fugitive",
+        "kdheepak/lazygit.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
     },
 
     -- Gitsigns
