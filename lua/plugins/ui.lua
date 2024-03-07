@@ -83,4 +83,30 @@ return {
             vim.g.table_mode_header_fillchar = "="
         end,
     },
+    {
+        "lucashdez/4coder-theme",
+    },
+    {
+        "echasnovski/mini.hipatterns",
+        event = "BufReadPre",
+        opts = function()
+            local hi = require("mini.hipatterns")
+            return {
+                highlighters = {
+                    hsl_color = {
+                        pattern = "hsl%(%d+,? %d+,? %d+%)",
+                        group = function(_, match)
+                            local utils = require("4coder-theme.hsl")
+                            local nh, ns, nl = match:match("hsl%((%d+),? (%d+),? (%d+)%)")
+                            local h, s, l = tonumber(nh), tonumber(ns), tonumber(nl)
+                            --- @type string
+                            local hex_color = utils.hslToHex(h, s, l)
+                            return hi.compute_hex_color_group(hex_color, "bg")
+                        end,
+                    },
+                    hex_color = hi.gen_highlighter.hex_color({ priority = 2000 }),
+                },
+            }
+        end,
+    },
 }
