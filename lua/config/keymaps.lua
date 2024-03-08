@@ -5,7 +5,6 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 vim.g.maplocalleader = ";"
-
 -- Back to normal
 keymap.set("i", "<C-l>", "<Esc>", opts)
 keymap.set("v", "<C-l>", "<Esc>", opts)
@@ -45,6 +44,12 @@ keymap.set("n", "gg", "ggzz")
 keymap.set("n", "<S-q>", "<Cmd>bdelete!<CR>")
 
 -- Diagnostics
-keymap.set("n", "C-j", function()
+keymap.set("n", "<S-d>", function()
     vim.diagnostic.goto_next()
+end)
+
+-- TSGroup
+keymap.set("n", "<Leader>ti", function()
+    local result = vim.treesitter.get_captures_at_cursor(0)
+    print(vim.inspect(result))
 end)
