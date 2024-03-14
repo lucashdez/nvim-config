@@ -53,3 +53,16 @@ keymap.set("n", "<Leader>ti", function()
     local result = vim.treesitter.get_captures_at_cursor(0)
     print(vim.inspect(result))
 end)
+
+-- Nabla
+local nabla_virt = false
+keymap.set("n", "<Leader>n", function()
+    local nabla = require("nabla")
+    if nabla_virt then
+        nabla.disable_virt()
+        nabla_virt = false
+    else
+        nabla.enable_virt()
+        nabla_virt = true
+    end
+end)

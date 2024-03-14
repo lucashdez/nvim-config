@@ -15,4 +15,7 @@ return {
     {
         "HiPhish/rainbow-delimiters.nvim",
     },
+    {
+        "jbyuki/nabla.nvim",
+    },
 }
