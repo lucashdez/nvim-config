@@ -3,8 +3,6 @@
 -- Add any additional keymaps here
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
-
-vim.g.maplocalleader = ";"
 -- Back to normal
 keymap.set("i", "<C-l>", "<Esc>", opts)
 keymap.set("v", "<C-l>", "<Esc>", opts)
