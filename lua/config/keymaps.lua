@@ -6,15 +6,15 @@ local opts = { noremap = true, silent = true }
 -- Back to normal
 keymap.set("i", "<C-l>", "<Esc>", opts)
 keymap.set("v", "<C-l>", "<Esc>", opts)
+vim.cmd([[
+tnoremap <silent> <C-l> <C-\><C-n>
+]])
 
 -- Windows
 --
 -- Terminal horizontal/vertical
 keymap.set("n", "<Localleader>th", ":botright new <Bar> :terminal<CR>")
 keymap.set("n", "<Localleader>tv", ":botright vnew <Bar> :terminal<CR>")
-vim.cmd([[
-tnoremap <silent> <C-k> <C-\><C-n>
-]])
 -- Save/Quit
 keymap.set("n", "<Localleader>w", "<Cmd>w<CR>")
 keymap.set("n", "<Localleader>q", "<Cmd>q<CR>")
