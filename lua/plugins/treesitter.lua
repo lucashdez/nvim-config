@@ -19,11 +19,11 @@ return {
             require("nvim-treesitter.configs").setup(opts)
         end,
     },
+    { "vhyrro/luarocks.nvim", priority = 1000, config = true },
     {
         "nvim-neorg/neorg",
-        build = ":Neorg sync-parsers",
         -- tag = "*",
-        dependencies = { "nvim-lua/plenary.nvim" },
+        dependencies = { "luarocks.nvim" },
         config = function()
             local notes_d = "~/drive/El-Arca"
             if vim.fn.has("win32") then
@@ -37,11 +37,6 @@ return {
                     --["core.tempus"] = {},
                     --["core.ui.calendar"] = {},
                     ["core.summary"] = {},
-                    ["core.completion"] = {
-                        config = {
-                            engine = "nvim-cmp",
-                        },
-                    },
                     ["core.dirman"] = { -- Manages Neorg workspaces
                         config = {
                             workspaces = {
@@ -49,6 +44,8 @@ return {
                             },
                         },
                     },
+                    ["core.integrations.treesitter"] = {},
+                    ["core.integrations.nvim-cmp"] = {},
                 },
             })
         end,
