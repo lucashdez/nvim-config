@@ -1,6 +1,10 @@
 return {
     {
         "folke/noice.nvim",
+        dependencies = {
+
+            "MunifTanjim/nui.nvim",
+        },
         opts = function(_, opts)
             table.insert(opts.routes, {
                 filter = {
@@ -23,7 +27,9 @@ return {
     {
         "rcarriga/nvim-notify",
         opts = {
-            timeout = 500,
+            timeout = 1000,
+            animate = true,
+            stages = "slide",
         },
     },
     -- bufferline
