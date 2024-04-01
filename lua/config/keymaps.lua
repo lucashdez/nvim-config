@@ -32,8 +32,6 @@ keymap.set("n", "<Localleader>ss", ":split<Return><C-w>w")
 keymap.set("n", "<Localleader>sv", ":vsplit<Return><C-w>w")
 
 -- Movement
-keymap.set("n", "<C-d>", "<C-d>zz")
-keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzz")
 keymap.set("n", "N", "Nzz")
 keymap.set("n", "G", "Gzz")

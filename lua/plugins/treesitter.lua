@@ -7,12 +7,12 @@ return {
                 "cmake",
                 "cpp",
                 "c",
+                "lua",
                 "astro",
                 "scss",
                 "css",
                 "sql",
                 "norg",
-                "norg_meta",
             },
         },
         config = function(_, opts)
