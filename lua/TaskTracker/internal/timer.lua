@@ -8,7 +8,6 @@ local Timer = {}
 
 function Timer.get_instant(other)
 	local instant = os.time()
-	print(instant - other.stime)
 	return os.date("!%H:%M:%S", instant - other.stime)
 end
 
