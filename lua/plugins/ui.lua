@@ -115,4 +115,11 @@ return {
             }
         end,
     },
+    {
+        "AlexvZyl/nordic.nvim",
+    },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+    },
 }

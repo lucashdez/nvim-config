@@ -17,6 +17,21 @@ return {
         },
         config = function(_, opts)
             require("nvim-treesitter.configs").setup(opts)
+            local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+            parser_config.sqls = {
+                install_info = {
+                    url = "~/projects/tree-sitter-sqls",
+                    files = { "src/parser.c" },
+                },
+                filetype = "sqls",
+            }
+            vim.api.nvim_create_autocmd("FileType", {
+                pattern = "sqls",
+                callback = function(args)
+                    vim.treesitter.start(args.buf, "sqls")
+                end,
+            })
+            vim.treesitter.language.register("sqls", "sqls")
         end,
     },
     { "vhyrro/luarocks.nvim", priority = 1000, config = true },
