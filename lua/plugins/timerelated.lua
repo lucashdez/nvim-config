@@ -13,5 +13,8 @@ return {
     },
     {
         "lucashdez/TaskTracker",
+        config = function()
+            local tt = require("TaskTracker").setup({})
+        end,
     },
 }
