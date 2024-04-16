@@ -5,4 +5,4 @@ vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
 vim.o.expandtab = true
 vim.cmd([[highlight myCursor guifg=black guibg=lime]])
-vim.opt.guicursor = { "n:block-myCursor,v-c:block-myCursor,i:ver100-myCursor" }
+vim.opt.guicursor = { "n:block-myCursor,v:block-myCursor,i:ver100-myCursor,o-c-ci-cr:ver100-myCursor" }
