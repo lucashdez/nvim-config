@@ -783,18 +783,10 @@ require('lazy').setup({
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'folke/tokyonight.nvim',
     'craftzdog/solarized-osaka.nvim',
+    'luisiacc/handmade-hero-theme',
     { 'rose-pine/neovim', name = 'rose-pine' },
     priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-      -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'solarized-osaka'
-
-      -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
-      vim.o.guicursor = 'n-v-c:block-Cursor,i-ci-ve:ver25-Cursor'
-    end,
+    init = function() end,
   },
 
   -- Highlight todo, notes, etc in comments
@@ -834,6 +826,7 @@ require('lazy').setup({
       end
 
       -- ... and there is more!
+      require('mini.align').setup()
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
@@ -970,8 +963,8 @@ require('lazy').setup({
 
 vim.cmd [[highlight nlCursor guifg=fg guibg=#dd4040]]
 vim.cmd [[highlight ilCursor guifg=fg guibg=#40FF40]]
+vim.cmd.colorscheme 'handmade-hero-theme'
 vim.o.guicursor = 'n-v-c:block-nlCursor,i-ci-ve:ver25-ilCursor'
-vim.cmd.colorscheme 'solarized-osaka'
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.relativenumber = true
