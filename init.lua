@@ -186,6 +186,7 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<Leader>tt', ':FTermToggle<CR>')
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -574,6 +575,10 @@ require('lazy').setup({
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
+        zls = {
+          format_on_save = false,
+          provideFormatter = false,
+        },
 
         lua_ls = {
           -- cmd = {...},
@@ -642,7 +647,7 @@ require('lazy').setup({
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
-        local disable_filetypes = { c = true, cpp = true }
+        local disable_filetypes = { c = true, cpp = true, zig = true }
         return {
           timeout_ms = 500,
           lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
@@ -871,18 +876,12 @@ require('lazy').setup({
       require('startup').setup { theme = 'startify' }
     end,
   },
+
   {
-    'OXY2DEV/markview.nvim',
-    ft = 'markdown',
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter',
-      'nvim-tree/nvim-web-devicons',
-    },
-  },
-  {
-    'salkin-mada/apl.nvim',
+    'numToStr/FTerm.nvim',
     config = function()
-      require('apl').setup {}
+      require('FTerm').setup { cmd = 'cmd' }
+      vim.api.nvim_create_user_command('FTermToggle', require('FTerm').toggle, { bang = true })
     end,
   },
 
@@ -937,6 +936,7 @@ vim.o.guicursor = 'n-v-c:block-nlCursor,i-ci-ve:ver25-ilCursor'
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.relativenumber = true
+vim.cmd [[let g:zig_fmt_autosave = 0]]
 
 if vim.g.neovide then
   vim.g.neovide_transparency = 1
