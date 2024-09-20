@@ -931,7 +931,7 @@ require('lazy').setup({
 
 vim.cmd [[highlight nlCursor guifg=fg guibg=#dd4040]]
 vim.cmd [[highlight ilCursor guifg=fg guibg=#40FF40]]
-vim.cmd.colorscheme 'handmade-hero-theme'
+vim.cmd.colorscheme 'solarized-osaka-night'
 vim.o.guicursor = 'n-v-c:block-nlCursor,i-ci-ve:ver25-ilCursor'
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
@@ -939,7 +939,10 @@ vim.o.relativenumber = true
 vim.cmd [[let g:zig_fmt_autosave = 0]]
 
 if vim.g.neovide then
-  vim.g.neovide_transparency = 1
+  vim.g.neovide_transparency = 0.85
+  vim.g.neovide_window_blurred = true
+  vim.g.neovide_floating_blur_amount_x = 2.0
+  vim.g.neovide_floating_blur_amount_y = 2.0
 end
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
