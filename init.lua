@@ -938,7 +938,7 @@ require('lazy').setup({
 vim.cmd [[highlight nlCursor guifg=fg guibg=#dd4040]]
 vim.cmd [[highlight ilCursor guifg=fg guibg=#40FF40]]
 vim.cmd.colorscheme 'solarized-osaka-night'
-vim.o.guicursor = 'n-v-c:block-nlCursor,i-ci-ve:ver25-ilCursor'
+vim.o.guicursor = 'i-ci-ve:ver25-ilCursor'
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.relativenumber = true
