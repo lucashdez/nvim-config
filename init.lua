@@ -623,6 +623,15 @@ require('lazy').setup({
             require('lspconfig')[server_name].setup(server)
           end,
         },
+        servers = {
+          denols = {
+            fmt = {
+              options = {
+                indent_width = 4,
+              },
+            },
+          },
+        },
       }
     end,
   },
@@ -660,7 +669,11 @@ require('lazy').setup({
         --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
-        -- javascript = { { "prettierd", "prettier" } },
+      },
+      formatters = {
+        denols = {
+          args = { '--indent-width', '4' },
+        },
       },
     },
   },
