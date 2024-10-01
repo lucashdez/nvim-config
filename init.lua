@@ -869,9 +869,29 @@ require('lazy').setup({
 
       -- Prefer git instead of curl in order to improve connectivity in some environments
       require('nvim-treesitter.install').prefer_git = false
-      require('nvim-treesitter.install').compilers = { 'clang', 'gcc', 'cl' }
+      require('nvim-treesitter.install').compilers = { 'clang' }
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup(opts)
+
+      local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
+      local vb_path = ''
+      if vim.fn.has 'win32' then
+        vb_path = '$HOME/AppData/Local/nvim-data/tree-sitter-vb/'
+      else
+        vb_path = '.local/share/nvim-data/tree-sitter-vb/'
+      end
+
+      parser_config.vb = {
+        install_info = {
+          url = vb_path,
+          files = { 'src/parser.c' },
+          branch = 'main',
+          generate_requires_npm = false,
+          requires_generate_from_grammar = false,
+        },
+        filetype = 'vb',
+      }
+      vim.api.nvim_command [[autocmd BufNewFile,BufRead *.vb setfiletype vb]]
 
       -- There are additional nvim-treesitter modules that you can use to interact
       -- with nvim-treesitter. You should go explore a few and see what interests you:
