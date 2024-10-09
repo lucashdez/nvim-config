@@ -913,7 +913,11 @@ require('lazy').setup({
   {
     'numToStr/FTerm.nvim',
     config = function()
-      require('FTerm').setup { cmd = 'cmd' }
+      local terminal = 'zsh'
+      if vim.fn.has 'win32' == 1 then
+        terminal = 'cmd'
+      end
+      require('FTerm').setup { cmd = terminal }
       vim.api.nvim_create_user_command('FTermToggle', require('FTerm').toggle, { bang = true })
     end,
   },
