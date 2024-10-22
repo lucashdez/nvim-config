@@ -182,10 +182,6 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '<Leader>tt', ':FTermToggle<CR>')
 
 -- [[ Basic Autocommands ]]
@@ -575,11 +571,6 @@ require('lazy').setup({
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
-        zls = {
-          format_on_save = false,
-          provideFormatter = false,
-        },
-
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -800,6 +791,7 @@ require('lazy').setup({
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'folke/tokyonight.nvim',
+    { 'alljokecake/naysayer-theme.nvim', name = 'naysayer' },
     'craftzdog/solarized-osaka.nvim',
     'luisiacc/handmade-hero-theme',
     { 'rose-pine/neovim', name = 'rose-pine' },
@@ -834,7 +826,6 @@ require('lazy').setup({
       local statusline = require 'mini.statusline'
       -- set use_icons to true if you have a Nerd Font
       statusline.setup { use_icons = vim.g.have_nerd_font }
-
       -- You can configure sections in the statusline by overriding their
       -- default behavior. For example, here we set the section for
       -- cursor location to LINE:COLUMN
@@ -863,6 +854,10 @@ require('lazy').setup({
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },
+      incremental_selection = {
+        enable = true,
+        keymaps = { init_selection = '<C-space>', node_incremental = '<C-space>', scope_incremental = false, node_decremental = '<bs>' },
+      },
     },
     config = function(_, opts)
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
@@ -970,7 +965,8 @@ require('lazy').setup({
 
 vim.cmd [[highlight nlCursor guifg=fg guibg=#dd4040]]
 vim.cmd [[highlight ilCursor guifg=fg guibg=#40FF40]]
-vim.cmd.colorscheme 'solarized-osaka-night'
+--vim.cmd.colorscheme 'solarized-osaka-night'
+vim.cmd.colorscheme 'naysayer'
 vim.o.guicursor = 'i-ci-ve:ver25-ilCursor'
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
