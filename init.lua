@@ -876,6 +876,7 @@ require('lazy').setup({
         vb_path = '.local/share/nvim-data/tree-sitter-vb/'
       end
 
+      ---@diagnostic disable-next-line: inject-field
       parser_config.vb = {
         install_info = {
           url = vb_path,

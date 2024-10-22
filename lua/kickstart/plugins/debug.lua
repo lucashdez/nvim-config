@@ -65,7 +65,6 @@ return {
         -- Update this to ensure that you have the debuggers for the langs you want
       },
     }
-
     -- Dap UI setup
     -- For more information, see |:help nvim-dap-ui|
     dapui.setup {
