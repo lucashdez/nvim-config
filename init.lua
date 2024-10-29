@@ -927,15 +927,21 @@ require('lazy').setup({
   },
 
   {
-    "folke/noice.nvim",
-    event = "VeryLazy",
+    'folke/noice.nvim',
+    event = 'VeryLazy',
     opts = {},
     dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
     },
     config = function()
-      require("noice").setup({})
+      require('noice').setup {}
+    end,
+  },
+  {
+    'jbyuki/nabla.nvim',
+    config = function()
+        vim.keymap.set('n', '<leader>np', ":lua require('nabla').toggle_virt()<CR>")
     end,
   },
 
