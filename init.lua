@@ -918,10 +918,24 @@ require('lazy').setup({
       vim.api.nvim_create_user_command('FTermToggle', require('FTerm').toggle, { bang = true })
     end,
   },
+
   {
     'brenoprata10/nvim-highlight-colors',
     config = function()
       require('nvim-highlight-colors').setup {}
+    end,
+  },
+
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {},
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+    config = function()
+      require("noice").setup({})
     end,
   },
 
