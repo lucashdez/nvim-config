@@ -936,12 +936,16 @@ require('lazy').setup({
     },
     config = function()
       require('noice').setup {}
+      require('notify').setup {
+        timeout = 1000,
+        stages = 'slide',
+      }
     end,
   },
   {
     'jbyuki/nabla.nvim',
     config = function()
-        vim.keymap.set('n', '<leader>np', ":lua require('nabla').toggle_virt()<CR>")
+      vim.keymap.set('n', '<leader>np', ":lua require('nabla').toggle_virt()<CR>")
     end,
   },
 
