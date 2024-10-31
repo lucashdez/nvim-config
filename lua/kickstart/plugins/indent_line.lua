@@ -6,7 +6,11 @@ return {
     main = 'ibl',
     opts = {},
     config = function()
-      require('ibl').setup { scope = { enabled = true } }
+      require('ibl').setup {
+        scope = {
+          enabled = true,
+        },
+      }
     end,
   },
 }
