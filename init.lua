@@ -949,6 +949,47 @@ require('lazy').setup({
     end,
   },
 
+  -- {
+  --   "3rd/image.nvim",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require("image").setup {}
+  --   end
+  --
+  -- },
+  {
+    'nvim-neorg/neorg',
+    lazy = false,
+    version = '*',
+    config = function()
+      local path_notes = '~/drive/El-Arca/neorg-notes'
+      if vim.fn.has 'win32' then
+        path_notes = 'G:/My Drive/El-Arca/neorg-notes'
+      end
+      require('neorg').setup {
+        load = {
+          ['core.defaults'] = {},
+          ['core.concealer'] = {},
+          ['core.completion'] = {
+            config = {
+              engine = 'nvim-cmp',
+            },
+          },
+          ['core.ui.calendar'] = {},
+          ['core.itero'] = {},
+          ['core.dirman'] = {
+            config = {
+              workspaces = {
+                notes = path_notes,
+              },
+              default_workspace = 'notes',
+            },
+          },
+        },
+      }
+    end,
+  },
+
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
