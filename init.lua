@@ -963,7 +963,7 @@ require('lazy').setup({
     version = '*',
     config = function()
       local path_notes = '~/drive/El-Arca/neorg-notes'
-      if vim.fn.has 'win32' then
+      if vim.fn.has 'win32' == 1 then
         path_notes = 'G:/My Drive/El-Arca/neorg-notes'
       end
       require('neorg').setup {
@@ -988,6 +988,26 @@ require('lazy').setup({
         },
       }
     end,
+  },
+
+  {
+    'Zeioth/compiler.nvim',
+    cmd = { 'CompilerOpen', 'CompilerToggleResults', 'CompilerRedo' },
+    dependencies = { 'stevearc/overseer.nvim', 'nvim-telescope/telescope.nvim' },
+    opts = {},
+  },
+  {
+    'stevearc/overseer.nvim',
+    commit = '6271cab7ccc4ca840faa93f54440ffae3a3918bd',
+    cmd = { 'CompilerOpen', 'CompilerToggleResults', 'CompilerRedo' },
+    opts = {
+      task_list = {
+        direction = 'bottom',
+        min_height = 25,
+        max_height = 25,
+        default_detail = 1,
+      },
+    },
   },
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
