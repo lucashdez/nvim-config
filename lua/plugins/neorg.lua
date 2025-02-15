@@ -1,4 +1,3 @@
-
 return {
   {
     'vhyrro/luarocks.nvim',
@@ -19,9 +18,10 @@ return {
     dependencies = { 'luarocks.nvim' },
     config = function()
       local path_notes = '~/drive/El-Arca/neorg-notes'
-      if vim.fn.has 'win32' then
+      if _G['win32'] then
         path_notes = 'G:/My Drive/El-Arca/neorg-notes'
       end
+
       require('neorg').setup {
         load = {
           ['core.defaults'] = {},
@@ -43,7 +43,7 @@ return {
           },
         },
       }
-        vim.keymap.set("n", "<Space>l", "<Plug>(neorg.qol.todo-items.todo.task-cycle)", {})
+      vim.keymap.set('n', '<Space>l', '<Plug>(neorg.qol.todo-items.todo.task-cycle)', {})
     end, --]],
   },
 }
