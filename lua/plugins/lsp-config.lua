@@ -11,10 +11,8 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"clangd",
                     "cssls",
                     "html",
-                    "rust_analyzer",
                     "zls",
 				},
 			})
@@ -29,23 +27,11 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-            lspconfig.clangd.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.cssls.setup({
-                capabilities = capabilities,
-            })
-            lspconfig.pyright.setup({
-                capabilities = capabilities,
-            })
             lspconfig.html.setup({
                 capabilities = capabilities,
             })
-            lspconfig.rust_analyzer.setup({
-                capabilities = capabilities,
-            })
             lspconfig.zls.setup({
-                capabilities = capabilities
+                capabilities = capabilities,
             })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
