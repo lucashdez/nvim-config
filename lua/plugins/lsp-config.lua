@@ -33,11 +33,11 @@ return {
             lspconfig.zls.setup({
                 capabilities = capabilities,
             })
-            lsp.cssls.setup({
+            lspconfig.cssls.setup({
                 capabilities = capabilities,
             })
 
-            lsp.denols.setup({
+            lspconfig.denols.setup({
                 capabilities = capabilities,
             })
 
