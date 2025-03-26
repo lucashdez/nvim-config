@@ -22,6 +22,8 @@ return {
                 'solarized-osaka-moon',
                 'solarized-osaka-night',
                 'solarized-osaka-storm',
+                'naysayer',
+                'gruber-darker',
             },
             livePreview = true,
         }
