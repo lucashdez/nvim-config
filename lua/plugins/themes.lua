@@ -7,7 +7,7 @@ return {
         opts = {},
     },
     {
-        'alljokecake/naysayer-theme.nvim',
+        'lucashdez/the-real-naysayer.nvim',
         name = 'naysayer',
         lazy = false,
         config = function()
