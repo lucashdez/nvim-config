@@ -23,6 +23,12 @@ return {
         end,
     },
     {
+        'lucashdez/4coder-theme',
+        config = function()
+            require('4coder-theme').setup {}
+        end,
+    },
+    {
         'CodeGradox/onehalf-lush',
         name = 'onehalf',
         priority = 1000,

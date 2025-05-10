@@ -13,13 +13,13 @@ return {
                     'lua_ls',
                     'cssls',
                     'html',
-                    'zls',
                 },
             }
         end,
     },
     {
         'neovim/nvim-lspconfig',
+        opts = { servers = { zls = { init_options = { provideFormatter = false } } } },
         config = function()
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
             local lspconfig = require 'lspconfig'

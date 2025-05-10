@@ -18,6 +18,4 @@ if vim.g.neovide then
     vim.g.neovide_transparency = 0.85
 end
 
-vim.cmd [[highlight Cursor guibg=#8DEE90]]
-
 

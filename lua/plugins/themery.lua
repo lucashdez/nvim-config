@@ -3,17 +3,20 @@ return {
     config = function()
         require('themery').setup {
             themes = {
+                '4coder-theme',
                 'catppuccin-frappe',
+                'catppuccin-latte',
                 'catppuccin-macchiato',
                 'catppuccin-mocha',
-                'catppuccin-latte',
                 'dracula',
                 'dracula-soft',
+                'gruber-darker',
                 'gruvbox',
-                'kanagawa-wave',
                 'kanagawa-dragon',
                 'kanagawa-lotus',
+                'kanagawa-wave',
                 'modus_vivendi',
+                'naysayer',
                 'nordic',
                 'onehalf-lush',
                 'onehalf-lush-dark',
@@ -22,8 +25,6 @@ return {
                 'solarized-osaka-moon',
                 'solarized-osaka-night',
                 'solarized-osaka-storm',
-                'naysayer',
-                'gruber-darker',
             },
             livePreview = true,
         }
@@ -31,7 +32,7 @@ return {
 
         -- Themery block
         -- This block will be replaced by Themery.
-        vim.cmd 'colorscheme naysayer'
+        vim.cmd 'colorscheme 4coder-theme'
         vim.g.theme_id = 3
         -- end themery block
     end,
