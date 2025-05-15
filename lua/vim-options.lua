@@ -19,6 +19,10 @@ vim.keymap.set("v", "<C-y>", "\"+y", {})
 vim.keymap.set({"n", "v"}, "<C-p>", "\"+p", {})
 vim.keymap.set("n", "<C-P>", "\"+P", {})
 vim.keymap.set("n", "<C-t>", ":terminal<CR>i", {})
+vim.keymap.set("n", ",", ":vsplit<CR>", {silent = true})
+vim.keymap.set("n", "-", ":split<CR>", {silent = true})
+vim.keymap.set("n", "<C-,>", "<C-w><C-w>", {})
+vim.keymap.set("n", "<C-S-P>", ":close<CR>", {silent = true})
 
 -- Change movements (jk) to their "go" version
 vim.keymap.set({"n", "v"}, "j", "gj", {})
