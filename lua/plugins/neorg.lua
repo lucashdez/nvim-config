@@ -18,9 +18,6 @@ return {
     dependencies = { 'luarocks.nvim' },
     config = function()
       local path_notes = '~/drive/El-Arca/neorg-notes'
-      if vim.fn.has('win32') == 1 then
-        path_notes = 'G:/My Drive/El-Arca/neorg-notes'
-      end
 
       require('neorg').setup {
         load = {
