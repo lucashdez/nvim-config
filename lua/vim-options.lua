@@ -7,7 +7,7 @@ vim.cmd("set number")
 vim.cmd("set cindent")
 vim.cmd("set cinoptions=2")
 vim.cmd("set fillchars=eob:\\ ")
-vim.cmd("tnoremap <Esc> <C-\\><C-n>")
+vim.cmd("tnoremap <S-Esc> <C-\\><C-n>")
 
 -- redo
 vim.keymap.set("n", "U", "<C-r>", {})
