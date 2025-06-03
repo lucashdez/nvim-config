@@ -4,6 +4,7 @@ return {
         require('themery').setup {
             themes = {
                 '4coder-theme',
+                'ayu',
                 'catppuccin-frappe',
                 'catppuccin-latte',
                 'catppuccin-macchiato',
@@ -32,7 +33,7 @@ return {
 
         -- Themery block
         -- This block will be replaced by Themery.
-        vim.cmd 'colorscheme catppuccin-mocha'
+        vim.cmd 'colorscheme ayu'
         vim.g.theme_id = 3
         -- end themery block
     end,
