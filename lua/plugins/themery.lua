@@ -11,6 +11,7 @@ return {
                 'catppuccin-mocha',
                 'dracula',
                 'dracula-soft',
+                'fleury_theme',
                 'gruber-darker',
                 'gruvbox',
                 'kanagawa-dragon',

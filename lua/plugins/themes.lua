@@ -1,6 +1,13 @@
 return {
   { 'blazkowolf/gruber-darker.nvim' },
   {
+    'lucashdez/fleury_theme.nvim',
+        priority = 1000,
+    config = function()
+      require('fleury_theme').setup {}
+    end,
+  },
+  {
     'Shatur/neovim-ayu',
     config = function()
       require('ayu').setup {}
