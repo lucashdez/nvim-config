@@ -22,6 +22,9 @@ return {
                 'nordic',
                 'onehalf-lush',
                 'onehalf-lush-dark',
+                'rose-pine-main',
+                'rose-pine-dawn',
+                'rose-pine-moon',
                 'solarized-osaka',
                 'solarized-osaka-day',
                 'solarized-osaka-moon',
@@ -34,7 +37,7 @@ return {
 
         -- Themery block
         -- This block will be replaced by Themery.
-        vim.cmd 'colorscheme ayu'
+        vim.cmd 'colorscheme rose-pine-main'
         vim.g.theme_id = 3
         -- end themery block
     end,
