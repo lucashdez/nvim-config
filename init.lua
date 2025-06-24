@@ -15,7 +15,7 @@ require("lazy").setup("plugins")
 vim.o.background = "dark"
 
 if vim.g.neovide then
-    vim.g.neovide_transparency = 0.85
+    vim.g.neovide_opacity = 0.85
 end
 
 vim.cmd [[let g:zig_fmt_autosave = 0]]
