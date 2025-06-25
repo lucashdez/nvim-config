@@ -4,6 +4,7 @@ return {
         config = function()
             require('mason').setup()
         end,
+        version = "^1.0.0",
     },
     {
         'williamboman/mason-lspconfig.nvim',
@@ -16,6 +17,7 @@ return {
                 },
             }
         end,
+        version = "^1.0.0"
     },
     {
         'neovim/nvim-lspconfig',
