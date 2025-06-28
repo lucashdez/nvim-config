@@ -10,9 +10,9 @@ return {
     {
         'lucashdez/fleury_theme.nvim',
         priority = 1000,
-        config = function()
-            require('fleury_theme').setup {}
-        end,
+        --config = function()
+        --    require('fleury_theme').setup {}
+        --end,
     },
     {
         'Shatur/neovim-ayu',
