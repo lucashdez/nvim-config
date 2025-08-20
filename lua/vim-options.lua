@@ -30,6 +30,7 @@ vim.keymap.set({"n", "v"}, "j", "gj", {})
 vim.keymap.set({"n", "v"}, "k", "gk", {})
 vim.keymap.set({"n", "v"}, "gb", "[{", {})
 vim.keymap.set({"n", "v"}, "ge", "]}", {})
+vim.keymap.set({'n', 'v'}, ':', "<cmd>FineCmdline<CR>", {silent = true, noremap = true})
 
 vim.g.mapleader = " "
 vim.opt.relativenumber = true

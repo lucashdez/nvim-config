@@ -36,7 +36,7 @@ return {
                 capabilities = capabilities,
             }
 
-            lspconfig.denols.setup {
+            lspconfig.ts_ls.setup {
                 capabilities = capabilities,
             }
             lspconfig.rust_analyzer.setup {
@@ -52,6 +52,10 @@ return {
             }
 
             lspconfig.clangd.setup {
+                capabilities = capabilities,
+            }
+
+            lspconfig.angularls.setup {
                 capabilities = capabilities,
             }
 
