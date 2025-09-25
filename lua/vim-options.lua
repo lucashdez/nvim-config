@@ -9,6 +9,8 @@ vim.cmd("set cinoptions=2")
 vim.cmd("set fillchars=eob:\\ ")
 vim.cmd("tnoremap <S-Esc> <C-\\><C-n>")
 
+vim.keymap.set("n", "<C-c><C-a>", ":OrgSuperAgenda<CR>", {silent = true})
+
 -- redo
 vim.keymap.set("n", "U", "<C-r>", {})
 
@@ -31,6 +33,9 @@ vim.keymap.set({"n", "v"}, "k", "gk", {})
 vim.keymap.set({"n", "v"}, "gb", "[{", {})
 vim.keymap.set({"n", "v"}, "ge", "]}", {})
 vim.keymap.set({'n', 'v'}, ':', "<cmd>FineCmdline<CR>", {silent = true, noremap = true})
+
+
+
 
 vim.g.mapleader = " "
 vim.opt.relativenumber = true
