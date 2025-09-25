@@ -6,8 +6,8 @@ return {
     config = function()
       -- Setup orgmode
       require('orgmode').setup {
-        org_agenda_files = '~/projects/ORG/**/*',
-        org_default_notes_file = '~/projects/ORG/template.org',
+        org_agenda_files = '~/drive/El-Arca/ORG/**/*',
+        org_default_notes_file = '~/drive/El-Arca/ORG/template.org',
       }
     end,
   },
