@@ -20,6 +20,15 @@ return {
         version = "^1.0.0"
     },
     {
+        'ray-x/lsp_signature.nvim',
+        event = 'InsertEnter',
+        config = function ()
+            require('lsp_signature').setup {}
+        end
+        
+
+    },
+    {
         'neovim/nvim-lspconfig',
         opts = { servers = { zls = { init_options = { provideFormatter = false } } } },
         config = function()
