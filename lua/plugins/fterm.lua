@@ -4,7 +4,7 @@ return {
         config = function()
             require('FTerm').setup {
                 border = 'double',
-                cmd = 'nu',
+                cmd = 'zsh',
             }
             vim.keymap.set('n', '<C-t>', function()
                 require('FTerm').toggle()
