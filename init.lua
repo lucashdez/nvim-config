@@ -14,7 +14,7 @@ require("vim-options")
 require("lazy").setup("plugins")
 vim.o.background = "dark"
 
-if vim.g.neovide then
+if vim.g.neovide then 
     vim.g.neovide_opacity = 0.85
 end
 
