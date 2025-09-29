@@ -5,10 +5,18 @@ return {
   ft = { 'org' },
   config = function()
    -- Setup orgmode
-   local notes = 'C:/projects/EmacsInfo/notes.org'
-   local agenda = 'C:/projects/EmacsInfo/**/*'
+   local notes = '/home/seriuusly/drive/El-Arca/ORG/template.org'
+   local agenda = 'home/seriuusly/drive/El-Arca/ORG/**/*'
+   if vim.fn.has("win32") then
+    notes = 'C:/projects/EmacsInfo/notes.org'
+    agenda = 'C:/projects/EmacsInfo/**/*'
+   end
+
+   notes = '/home/seriuusly/drive/El-Arca/ORG/template.org'
+   agenda = 'home/seriuusly/drive/El-Arca/ORG/**/*'
+
    require('orgmode').setup {
-    org_agenda_files = agenda,
+    org_agenda_files = '~/drive/El-Arca/ORG/**/*',
     org_default_notes_file = notes,
     org_todo_keywords = { 'BACKLOG', 'TODO', 'PROGRESS', '|', 'DONE', 'REVIEWED' },
     org_todo_keyword_faces = {
