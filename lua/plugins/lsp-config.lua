@@ -7,6 +7,16 @@ return {
         version = "^1.0.0",
     },
     {
+
+        "ray-x/lsp_signature.nvim",
+        event = "InsertEnter",
+        opts = { bind = true, handler_opts = { border = 'rounded' } },
+        config = function()
+            require('lsp_signature').setup({})
+        end
+
+    },
+    {
         'williamboman/mason-lspconfig.nvim',
         config = function()
             require('mason-lspconfig').setup {
@@ -40,6 +50,7 @@ return {
                 capabilities = capabilities,
             }
             lspconfig.rust_analyzer.setup {
+                cmd = { 'rust-analyzer' },
                 capabilities = capabilities,
             }
 
@@ -47,9 +58,13 @@ return {
                 capabilities = capabilities,
             }
 
-            lspconfig.csharp_ls.setup {
+            local omnisharp_location =
+            'C:/Users/lhernandezabreu/AppData/Local/nvim-data/mason/packages/omnisharp/OmniSharp.cmd'
+            lspconfig.omnisharp.setup {
                 capabilities = capabilities,
+                cmd = { omnisharp_location },
             }
+
 
             lspconfig.clangd.setup {
                 capabilities = capabilities,
@@ -58,8 +73,15 @@ return {
             lspconfig.angularls.setup {
                 capabilities = capabilities,
             }
+            local _border = "rounded"
+            local function bordered_hover(_opts)
+                _opts = _opts or {}
+                return vim.lsp.buf.hover(vim.tbl_deep_extend("force", _opts, {
+                    border = _border
+                }))
+            end
 
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+            vim.keymap.set('n', 'K', bordered_hover, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
             vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, {})
             vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
