@@ -82,6 +82,11 @@ return {
             lspconfig.angularls.setup {
                 capabilities = capabilities,
             }
+
+            lspconfig.zls.setup {
+                capabilities = capabilities,
+            }
+
             local _border = "rounded"
             local function bordered_hover(_opts)
                 _opts = _opts or {}
