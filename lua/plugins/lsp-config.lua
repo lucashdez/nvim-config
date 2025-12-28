@@ -45,47 +45,49 @@ return {
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
             local lspconfig = require 'lspconfig'
 
-            lspconfig.lua_ls.setup {
-                capabilities = capabilities,
-            }
-            lspconfig.html.setup {
-                capabilities = capabilities,
-            }
-            lspconfig.cssls.setup {
-                capabilities = capabilities,
-            }
 
-            lspconfig.ts_ls.setup {
+            vim.lsp.enable('lua_ls')
+            vim.lsp.config('lua_ls', {
                 capabilities = capabilities,
-            }
-            lspconfig.rust_analyzer.setup {
-                cmd = { 'rust-analyzer' },
-                capabilities = capabilities,
-            }
+            })
 
-            lspconfig.jdtls.setup {
-                capabilities = capabilities,
-            }
+            -- lspconfig.html.setup {
+            --     capabilities = capabilities,
+            -- }
+            -- lspconfig.cssls.setup {
+            --     capabilities = capabilities,
+            -- }
+            --
+            -- lspconfig.ts_ls.setup {
+            --     capabilities = capabilities,
+            -- }
+            -- lspconfig.rust_analyzer.setup {
+            --     cmd = { 'rust-analyzer' },
+            --     capabilities = capabilities,
+            -- }
+            --
+            -- lspconfig.jdtls.setup {
+            --     capabilities = capabilities,
+            -- }
 
-            local omnisharp_location =
-            'C:/Users/lhernandezabreu/AppData/Local/nvim-data/mason/packages/omnisharp/OmniSharp.cmd'
-            lspconfig.omnisharp.setup {
-                capabilities = capabilities,
-                cmd = { omnisharp_location },
-            }
+            -- local omnisharp_location =
+            -- 'C:/Users/lhernandezabreu/AppData/Local/nvim-data/mason/packages/omnisharp/OmniSharp.cmd'
+            -- lspconfig.omnisharp.setup {
+            --     capabilities = capabilities,
+            --     cmd = { omnisharp_location },
+            -- }
+
+            vim.lsp.enable('clangd')
+            vim.lsp.config('clangd', {capabilities = capabilities})
 
 
-            lspconfig.clangd.setup {
-                capabilities = capabilities,
-            }
-
-            lspconfig.angularls.setup {
-                capabilities = capabilities,
-            }
-
-            lspconfig.zls.setup {
-                capabilities = capabilities,
-            }
+            -- lspconfig.angularls.setup {
+            --     capabilities = capabilities,
+            -- }
+            --
+            -- lspconfig.zls.setup {
+            --     capabilities = capabilities,
+            -- }
 
             local _border = "rounded"
             local function bordered_hover(_opts)

@@ -15,10 +15,4 @@ return {
             end, { silent = true })
         end,
     },
-
-    {
-        'MunifTanjim/nui.nvim',
-        dependencies = {'VonHeikemen/fine-cmdline.nvim'},
-    }
-
 }
