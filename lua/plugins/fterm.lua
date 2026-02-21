@@ -3,9 +3,10 @@ return {
         'numToStr/FTerm.nvim',
         config = function()
             local cmd_shell = 'zsh'
-            if vim.fn.has("win32") == true then
+            local is_windows = package.config:sub(1,1) == "\\"
+            if is_windows then
                 cmd_shell = "nu"
-            end 
+            end
             require('FTerm').setup {
                 border = 'double',
                 cmd = cmd_shell,

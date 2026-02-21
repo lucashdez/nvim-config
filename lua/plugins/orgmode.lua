@@ -1,7 +1,7 @@
 return {
  {
   'nvim-orgmode/orgmode',
-  event = 'VeryLazy',
+  --event = 'VeryLazy',
   ft = { 'org' },
   config = function()
    -- Setup orgmode
@@ -12,11 +12,11 @@ return {
     agenda = 'C:/projects/EmacsInfo/**/*'
    end
 
-   notes = '/home/seriuusly/drive/El-Arca/ORG/template.org'
-   agenda = 'home/seriuusly/drive/El-Arca/ORG/**/*'
+   --notes = '/home/seriuusly/drive/El-Arca/ORG/template.org'
+   --agenda = 'home/seriuusly/drive/El-Arca/ORG/**/*'
 
    require('orgmode').setup {
-    org_agenda_files = '~/drive/El-Arca/ORG/**/*',
+    org_agenda_files = agenda,
     org_default_notes_file = notes,
     org_todo_keywords = { 'BACKLOG', 'TODO', 'PROGRESS', '|', 'DONE', 'REVIEWED' },
     org_todo_keyword_faces = {
